@@ -1,0 +1,142 @@
+html
+Copy
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>張韶涵的個人簡介網頁</title>
+    <style>
+        body {
+            font-family: 'Microsoft JhengHei', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+            color: #333;
+        }
+        .container {
+            width: 80%;
+            max-width: 1000px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .header h1 {
+            color: #2c3e50;
+            font-size: 2.5em;
+        }
+        .section {
+            margin-bottom: 30px;
+        }
+        .section h2 {
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 10px;
+            color: #2c3e50;
+        }
+        .social-links a {
+            display: inline-block;
+            margin-right: 15px;
+            color: #3498db;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        .social-links a:hover {
+            color: #2980b9;
+        }
+        .photos {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+        .photos img {
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+            margin: 10px;
+            border-radius: 10px;
+            transition: transform 0.3s;
+        }
+        .photos img:hover {
+            transform: scale(1.05);
+        }
+        .activities ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .activities li {
+            margin-bottom: 10px;
+            padding: 10px;
+            background-color: #ecf0f1;
+            border-radius: 5px;
+        }
+        @media (max-width: 768px) {
+            .container {
+                width: 95%;
+            }
+            .photos img {
+                width: 150px;
+                height: 150px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>張韶涵的個人簡介</h1>
+        </div>
+        <div class="section">
+            <h2>個人資訊</h2>
+            <p>大家好，我是張韶涵，一位來自台灣的流行歌手和演員。我出生於1982年1月19日，從小就熱愛音樂和表演。</p>
+        </div>
+        <div class="section social-links">
+            <h2>社交媒體連結</h2>
+            <a href="https://youtube.com/@havefunwithme" target="_blank">YouTube</a>
+            <a href="https://www.instagram.com/sshangelababy/" target="_blank">Instagram</a>
+            <a href="https://www.facebook.com/angelazhang19" target="_blank">Facebook</a>
+        </div>
+        <div class="section photos">
+            <h2>個人照片</h2>
+            <img src="https://example.com/angela1.jpg" alt="張韶涵演唱會照片" onerror="this.src='placeholder.jpg'">
+            <img src="https://example.com/angela2.jpg" alt="張韶涵生活照" onerror="this.src='placeholder.jpg'">
+            <img src="https://example.com/angela3.jpg" alt="張韶涵代言活動" onerror="this.src='placeholder.jpg'">
+        </div>
+        <div class="section activities">
+            <h2>活動紀錄</h2>
+            <ul>
+                <li>2023年：舉辦「張韶涵 2023 未來式世界巡迴演唱會」</li>
+                <li>2022年：發行單曲《不害怕》</li>
+                <li>2021年：推出個人第十張專輯《不害怕》</li>
+                <li>2020年：參與綜藝節目《乘風破浪的姐姐2》</li>
+            </ul>
+        </div>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log("張韶涵的個人簡介網頁已載入");
+            
+            // 為社交媒體連結添加點擊事件
+            const socialLinks = document.querySelectorAll('.social-links a');
+            socialLinks.forEach(link => {
+                link.addEventListener('click', function(event) {
+                    console.log(`點擊了 ${this.textContent} 連結`);
+                });
+            });
+
+            // 為照片添加點擊放大功能
+            const photos = document.querySelectorAll('.photos img');
+            photos.forEach(photo => {
+                photo.addEventListener('click', function() {
+                    this.style.transform = this.style.transform === 'scale(1.5)' ? 'scale(1)' : 'scale(1.5)';
+                });
+            });
+        });
+    </script>
+</body>
+</html>
