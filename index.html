@@ -1,141 +1,152 @@
 html
 Copy
 <!DOCTYPE html>
-<html lang="zh-TW">
+<html lang="zh-Hant">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>張韶涵的個人簡介網頁</title>
+    <title>機車老酥的個人簡介</title>
     <style>
         body {
-            font-family: 'Microsoft JhengHei', Arial, sans-serif;
+            font-family: 'Noto Sans TC', Arial, sans-serif;
+            line-height: 1.6;
             margin: 0;
             padding: 0;
             background-color: #f0f0f0;
             color: #333;
         }
-        .container {
-            width: 80%;
-            max-width: 1000px;
-            margin: 20px auto;
-            padding: 20px;
-            background-color: #fff;
-            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-            border-radius: 10px;
-        }
-        .header {
+        header {
+            background: #2c3e50;
+            color: #ecf0f1;
+            padding: 1em 0;
             text-align: center;
-            margin-bottom: 30px;
         }
-        .header h1 {
-            color: #2c3e50;
-            font-size: 2.5em;
+        main {
+            margin: 2em auto;
+            padding: 2em;
+            max-width: 800px;
+            background: #fff;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
         }
-        .section {
-            margin-bottom: 30px;
-        }
-        .section h2 {
-            border-bottom: 2px solid #3498db;
-            padding-bottom: 10px;
+        h1, h2 {
             color: #2c3e50;
         }
-        .social-links a {
-            display: inline-block;
-            margin-right: 15px;
-            color: #3498db;
-            text-decoration: none;
-            transition: color 0.3s;
+        section {
+            margin-bottom: 2em;
+            padding: 1em;
+            background: #ecf0f1;
+            border-radius: 8px;
         }
-        .social-links a:hover {
-            color: #2980b9;
-        }
-        .photos {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-around;
-        }
-        .photos img {
-            width: 200px;
-            height: 200px;
-            object-fit: cover;
-            margin: 10px;
-            border-radius: 10px;
-            transition: transform 0.3s;
-        }
-        .photos img:hover {
-            transform: scale(1.05);
-        }
-        .activities ul {
+        #social-media ul {
             list-style-type: none;
             padding: 0;
         }
-        .activities li {
-            margin-bottom: 10px;
-            padding: 10px;
-            background-color: #ecf0f1;
-            border-radius: 5px;
+        #social-media li {
+            margin-bottom: 0.5em;
         }
-        @media (max-width: 768px) {
-            .container {
-                width: 95%;
-            }
-            .photos img {
-                width: 150px;
-                height: 150px;
+        #social-media a {
+            color: #3498db;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        #social-media a:hover {
+            color: #2980b9;
+        }
+        #photos img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin-bottom: 1em;
+        }
+        footer {
+            text-align: center;
+            padding: 1em 0;
+            background: #2c3e50;
+            color: #ecf0f1;
+        }
+        @media (max-width: 600px) {
+            main {
+                padding: 1em;
             }
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <div class="header">
-            <h1>張韶涵的個人簡介</h1>
-        </div>
-        <div class="section">
-            <h2>個人資訊</h2>
-            <p>大家好，我是張韶涵，一位來自台灣的流行歌手和演員。我出生於1982年1月19日，從小就熱愛音樂和表演。</p>
-        </div>
-        <div class="section social-links">
-            <h2>社交媒體連結</h2>
-            <a href="https://youtube.com/@havefunwithme" target="_blank">YouTube</a>
-            <a href="https://www.instagram.com/sshangelababy/" target="_blank">Instagram</a>
-            <a href="https://www.facebook.com/angelazhang19" target="_blank">Facebook</a>
-        </div>
-        <div class="section photos">
-            <h2>個人照片</h2>
-            <img src="https://example.com/angela1.jpg" alt="張韶涵演唱會照片" onerror="this.src='placeholder.jpg'">
-            <img src="https://example.com/angela2.jpg" alt="張韶涵生活照" onerror="this.src='placeholder.jpg'">
-            <img src="https://example.com/angela3.jpg" alt="張韶涵代言活動" onerror="this.src='placeholder.jpg'">
-        </div>
-        <div class="section activities">
-            <h2>活動紀錄</h2>
+    <header>
+        <h1>機車老酥的個人簡介</h1>
+    </header>
+    <main>
+        <section id="personal-info">
+            <h2>關於我</h2>
+            <p>嗨，我是機車老酥！我熱愛騎乘機車，分享我的騎行經驗和冒險故事。</p>
+        </section>
+        <section id="social-media">
+            <h2>社交媒體</h2>
             <ul>
-                <li>2023年：舉辦「張韶涵 2023 未來式世界巡迴演唱會」</li>
-                <li>2022年：發行單曲《不害怕》</li>
-                <li>2021年：推出個人第十張專輯《不害怕》</li>
-                <li>2020年：參與綜藝節目《乘風破浪的姐姐2》</li>
+                <li><a href="https://youtube.com/@havefun" target="_blank">YouTube: 機車老酥</a></li>
+                <li><a href="#" id="instagram-link">Instagram: 即將推出</a></li>
+                <li><a href="#" id="facebook-link">Facebook: 即將推出</a></li>
             </ul>
-        </div>
-    </div>
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            console.log("張韶涵的個人簡介網頁已載入");
-            
-            // 為社交媒體連結添加點擊事件
-            const socialLinks = document.querySelectorAll('.social-links a');
-            socialLinks.forEach(link => {
-                link.addEventListener('click', function(event) {
-                    console.log(`點擊了 ${this.textContent} 連結`);
-                });
-            });
+        </section>
+        <section id="photos">
+            <h2>精選照片</h2>
+            <div id="photo-gallery">
+                <!-- 照片將通過JavaScript動態添加 -->
+            </div>
+        </section>
+        <section id="activity-records">
+            <h2>最新活動</h2>
+            <ul id="activities">
+                <!-- 活動記錄將通過JavaScript動態添加 -->
+            </ul>
+        </section>
+    </main>
+    <footer>
+        <p>© 2024 機車老酥 | 騎行冒險家</p>
+    </footer>
 
-            // 為照片添加點擊放大功能
-            const photos = document.querySelectorAll('.photos img');
-            photos.forEach(photo => {
-                photo.addEventListener('click', function() {
-                    this.style.transform = this.style.transform === 'scale(1.5)' ? 'scale(1)' : 'scale(1.5)';
-                });
-            });
+    <script>
+        // 模擬照片數據
+        const photos = [
+            { url: 'https://via.placeholder.com/300x200.png?text=騎行照片1', alt: '騎行照片1' },
+            { url: 'https://via.placeholder.com/300x200.png?text=騎行照片2', alt: '騎行照片2' },
+            { url: 'https://via.placeholder.com/300x200.png?text=騎行照片3', alt: '騎行照片3' }
+        ];
+
+        // 模擬活動記錄數據
+        const activities = [
+            '2024-05-01: 完成環島騎行',
+            '2024-04-15: 發布新的YouTube視頻',
+            '2024-03-30: 參加機車展覽'
+        ];
+
+        // 動態添加照片
+        const photoGallery = document.getElementById('photo-gallery');
+        photos.forEach(photo => {
+            const img = document.createElement('img');
+            img.src = photo.url;
+            img.alt = photo.alt;
+            photoGallery.appendChild(img);
+        });
+
+        // 動態添加活動記錄
+        const activitiesList = document.getElementById('activities');
+        activities.forEach(activity => {
+            const li = document.createElement('li');
+            li.textContent = activity;
+            activitiesList.appendChild(li);
+        });
+
+        // 社交媒體鏈接點擊事件
+        document.getElementById('instagram-link').addEventListener('click', function(e) {
+            e.preventDefault();
+            alert('Instagram帳號即將推出，敬請期待！');
+        });
+
+        document.getElementById('facebook-link').addEventListener('click', function(e) {
+            e.preventDefault();
+            alert('Facebook頁面即將推出，敬請期待！');
         });
     </script>
 </body>
